@@ -249,6 +249,36 @@ function renderProjection(r) {
     `;
 }
 
+window.autoOptimize = function () {
+
+    if (!lastData || !lastResponse) {
+        alert("Run analysis first");
+        return;
+    }
+
+    if (!lastResponse.optimized_plan) {
+        alert("No optimized plan available");
+        return;
+    }
+
+    const plan = lastResponse.optimized_plan;
+
+    for (let key in plan) {
+
+        const el = document.getElementById(key);
+
+        if (el && plan[key].hours !== undefined) {
+            el.value = plan[key].hours.toFixed(1);
+        }
+    }
+
+    whatif.innerHTML = `
+        <div class="whatif-box">
+            ⚡ Best AI optimization applied successfully
+        </div>
+    `;
+};
+
 function renderActions(costData, totalBill) {
     if (!actions) return;
 
