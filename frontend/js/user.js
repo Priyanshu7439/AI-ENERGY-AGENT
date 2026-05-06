@@ -279,6 +279,57 @@ window.autoOptimize = function () {
     `;
 };
 
+window.runWhatIf = async function () {
+
+    try {
+
+        if (!lastData) {
+            alert("Run analysis first");
+            return;
+        }
+
+        const device = optDevice.value;
+        const hours = +optHours.value || 0;
+
+        const res = await fetch(`${API}/what-if`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                ...lastData,
+                changes: {
+                    [device]: { hours }
+                }
+            })
+        });
+
+        if (!res.ok) {
+            throw new Error(await res.text());
+        }
+
+        const r = await res.json();
+
+        const percent =
+            ((r.old_bill - r.new_bill) / r.old_bill * 100).toFixed(1);
+
+        whatif.innerHTML = `
+            <div class="whatif-box">
+                ⚡ New Bill: ₹${r.new_bill}<br>
+                💰 Savings: ₹${r.monthly_savings}/month<br>
+                📉 ${percent}% reduction
+            </div>
+        `;
+
+        renderComparison(r.old_bill, r.new_bill);
+
+    } catch (err) {
+
+        console.error(err);
+        alert("What-if simulation failed");
+    }
+};
+
 function renderActions(costData, totalBill) {
     if (!actions) return;
 
