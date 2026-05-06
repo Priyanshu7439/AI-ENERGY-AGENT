@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h2>⚙️ AI Energy Engine</h2>
+
+    <div class="card">
+        <input id="hours" type="number" value="24">
+        <button onclick="runSimulation()">Run</button>
+    </div>
+
+    <div id="simInsights"></div>
+
+    <div class="chart-grid">
+
+        <div class="card">
+            <h3>⚡ Demand</h3>
+            <canvas id="demandChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>💰 Price</h3>
+            <canvas id="priceChart"></canvas>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h3>🤖 Agent Decisions</h3>
+        <ul id="agentLog"></ul>
+    </div>
+
+</div>

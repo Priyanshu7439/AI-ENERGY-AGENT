@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enerlytics</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div id="pageLoader" class="page-loader">
+
+<header>
+    <h1>⚡Enerlytics</h1>
+    <p>Smart energy insights powered by AI</p>
+    <div class="spinner"></div>
+</header>
+
+<section class="input-section">
+    <div class="input-grid">
+        <select id="state">
+            <option value="kolkata">Kolkata</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="chennai">Chennai</option>
+        </select>
+
+        <input id="fan" placeholder="Fan hrs">
+        <input id="ac" placeholder="AC hrs">
+        <input id="lights" placeholder="Lights hrs">
+        <input id="fridge" placeholder="Fridge hrs">
+        <input id="tv" placeholder="TV hrs">
+        <input id="washing_machine" placeholder="Washing hrs">
+        <input id="geyser" placeholder="Geyser hrs">
+
+        <button onclick="analyzeUser()">Analyze</button>
+    </div>
+</section>
+
+<section class="kpi-section">
+    <div class="kpi"><span>Units</span><h2 id="units">--</h2></div>
+    <div class="kpi"><span>Bill</span><h2 id="bill">--</h2></div>
+    <div class="kpi"><span>Prediction</span><h2 id="prediction">--</h2></div>
+    <div class="kpi"><span>Score</span><h2 id="score">--</h2></div>
+    <div class="kpi"><span>Temp</span><h2 id="temp">--</h2></div>
+</section>
+
+<section class="main-grid">
+
+    <div class="card chart-card">
+        <h3>Usage Breakdown</h3>
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Before vs After</h3>
+        <canvas id="compareChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>🧠 Agent Reasoning</h3>
+        <div id="agentTrace"></div>
+    </div>
+
+    <!-- 🔥 FIXED EMPTY AREA -->
+    <div class="card action-card">
+        <h3>⚡ Smart Actions</h3>
+        <div id="actions"></div>
+    </div>
+
+    <div class="card insight-card">
+        <h3>Insights</h3>
+        <div id="insights"></div>
+        <div id="weatherImpact"></div>
+    </div>
+
+    <div class="card ai-panel">
+    <h3>🧠 AI Decision Panel</h3>
+
+    <div id="actions"></div>
+
+    <div class="ai-summary">
+        <h4>Summary</h4>
+        <p id="aiSummary">Run analysis to see smart insights</p>
+    </div>
+    </div>
+
+</section>
+
+<section class="bottom-grid">
+
+    <div class="card">
+        <h3>Cost Breakdown</h3>
+        <div id="costBreakdown"></div>
+    </div>
+
+    <div class="card">
+        <h3>Projection</h3>
+        <div id="projection"></div>
+    </div>
+
+    <div class="card">
+        <h3>⚙ Smart Optimization</h3>
+
+        <button onclick="autoOptimize()">⚡ Auto Optimize</button>
+
+        <p id="autoSuggestion"></p>
+
+        <select id="optDevice">
+            <option value="fan">Fan</option>
+            <option value="ac">AC</option>
+            <option value="lights">Lights</option>
+            <option value="fridge">Fridge</option>
+            <option value="tv">TV</option>
+            <option value="washing_machine">Washing</option>
+            <option value="geyser">Geyser</option>
+        </select>
+
+        <input id="optHours" placeholder="New hours">
+        <button onclick="runWhatIf()">Simulate</button>
+
+        <div id="whatif"></div>
+    </div>
+
+</section>
+
+</div>
+
+<script src="../js/user.js"></script>
+</body>
+</html>

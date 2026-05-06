@@ -1,0 +1,12 @@
+{
+    "fan": 75,
+    "ac": 1500,
+    "fridge": 200,
+    "light": 10,
+    "geyser": 2000,
+    "iron": 1000,
+    "tv": 120,
+    "mixer": 500,
+    "blender": 100,
+    "charging_application": 300
+}

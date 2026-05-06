@@ -1,0 +1,9 @@
+{
+  "fan": 0.07,
+  "ac": 1.5,
+  "lights": 0.1,
+  "fridge": 1.2,
+  "tv": 0.15,
+  "washing_machine": 0.5,
+  "geyser": 2.0
+}

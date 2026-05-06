@@ -1,0 +1,305 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+.app {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* =========================
+   INPUT SECTION
+========================= */
+.input-section {
+    background: rgba(30,41,59,0.6);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* INPUT */
+.input-grid input,
+.input-grid select {
+    padding: 10px;
+    border-radius: 8px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+    outline: none;
+}
+
+.input-grid input:focus,
+.input-grid select:focus {
+    border-color: #3b82f6;
+}
+
+/* BUTTON */
+.input-grid button {
+    grid-column: span 4;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input-grid button:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   KPI SECTION
+========================= */
+.kpi-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.kpi {
+    background: #020617;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.kpi span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.kpi h2 {
+    margin-top: 6px;
+    color: #22c55e;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background: rgba(30,41,59,0.7);
+    padding: 18px;
+    border-radius: 14px;
+}
+
+/* =========================
+   CHART
+========================= */
+.chart-card canvas {
+    max-width: 280px;
+    margin: auto;
+}
+
+/* =========================
+   INSIGHTS
+========================= */
+.insight-card {
+    background: linear-gradient(135deg, #1e3a8a, #020617);
+}
+
+.insight-box {
+    background: #020617;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+}
+
+/* =========================
+   ACTION PANEL (FIXED AREA)
+========================= */
+.action-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-item {
+    background: #020617;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #22c55e;
+    font-size: 13px;
+}
+
+/* =========================
+   COST
+========================= */
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: #020617;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.trace-step {
+    background: #020617;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+    border-left: 3px solid #f59e0b;
+    font-size: 13px;
+}
+
+/* =========================
+   PROJECTION
+========================= */
+.projection-box {
+    padding: 8px;
+    background: #020617;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+/* =========================
+   OPTIMIZATION
+========================= */
+#optDevice,
+#optHours {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   WHAT IF RESULT
+========================= */
+#whatif {
+    margin-top: 10px;
+    color: #22c55e;
+}
+
+/* =========================
+   COMPARISON CHART
+========================= */
+#compareChart {
+    max-width: 350px;
+    margin: auto;
+}
+
+/* =========================
+   BOTTOM GRID
+========================= */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .input-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kpi-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-section {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .chart-card canvas {
+        max-width: 220px;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Branding -->
+    <title>Enerlytics | Energy Intelligence</title>
+    <meta name="description" content="Enerlytics - Smart energy insights, cost optimization, and real-time analysis.">
+
+    <!-- Redirect -->
+    <meta http-equiv="refresh" content="1; url=pages/dashboard.html" />
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #e2e8f0;
+        }
+
+        .loader {
+            text-align: center;
+        }
+
+        .loader h1 {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #22c55e, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .loader p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .spinner {
+            margin: 20px auto;
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="loader">
+    <h1>⚡ Enerlytics</h1>
+    <p>Loading your energy intelligence dashboard...</p>
+    <div class="spinner"></div>
+</div>
+
+</body>
+</html>
