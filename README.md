@@ -24,8 +24,17 @@ learns from user behavior over time
 adapts recommendations dynamically
 
 UI SCREENSHOT: 
+Before:
 
+<img width="1894" height="890" alt="Screenshot 2026-05-06 233514" src="https://github.com/user-attachments/assets/3bef04d6-5a7f-41d2-bff9-d3308081a9da" />
 
+<img width="1901" height="476" alt="Screenshot 2026-05-06 233534" src="https://github.com/user-attachments/assets/2f73a762-8e99-4fee-9dce-671bb539cf73" />
+
+After:
+
+<img width="1894" height="904" alt="Screenshot 2026-05-06 233614" src="https://github.com/user-attachments/assets/1b455a2b-632d-44c5-ac2e-ae9a810738da" />
+
+<img width="1893" height="913" alt="Screenshot 2026-05-06 234436" src="https://github.com/user-attachments/assets/6decf90f-79c0-417a-bcd2-ba7a8ac972a9" />
 
 
 🏗️ System Architecture
