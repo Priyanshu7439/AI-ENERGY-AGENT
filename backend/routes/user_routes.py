@@ -51,7 +51,7 @@ def get_slab_info(units, state):
     return {"current_rate": None}
 
 
-# ================= 🔥 INTELLIGENT AGENT =================
+# ================= INTELLIGENT AGENT =================
 def agent_optimize(appliances, state):
     trace = []
 
@@ -140,7 +140,7 @@ def analyze(data: dict):
     units, breakdown = calculate_units(appliances)
     bill = calculate_bill(units, state)
 
-    # 🔥 NEW AGENT
+    
     agent_result = agent_optimize(copy.deepcopy(appliances), state)
 
     # COST BREAKDOWN
@@ -170,7 +170,7 @@ def analyze(data: dict):
         "current_limit": slab_info.get("current_limit"),
         "previous_limit": slab_info.get("previous_limit"),
 
-        # 🔥 INTELLIGENCE OUTPUT
+        
         "agent_trace": agent_result["trace"],
         "optimized_bill": agent_result["best_bill"],
         "optimized_plan": agent_result["best_plan"]

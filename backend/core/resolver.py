@@ -22,7 +22,7 @@ class DecisionEngine:
     def score(self, metrics, state):
         demand = state["demand"]
 
-        # 🔥 Dynamic scoring (THIS IS THE UPGRADE)
+        # Dynamic scoring 
         if demand > 80:
             return (
                 0.7 * metrics["satisfaction"] +

@@ -18,7 +18,7 @@ class LearningAgent:
 
         predicted = self.predict_demand()
 
-        # 🔥 Smarter prediction blending
+        #Smarter prediction blending
         adjusted_demand = 0.7 * current_demand + 0.3 * predicted
 
         renewable = solar + wind

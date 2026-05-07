@@ -55,7 +55,7 @@ class SimulationService:
                 "selected_agent": decision["selected_agent"],
                 "final_allocation": decision["final_allocation"],
 
-                # 🔥 Advanced insight (this is what makes it strong)
+                # Advanced insight 
                 "agent_scores": decision["all_results"]
             })
 

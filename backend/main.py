@@ -5,7 +5,7 @@ from backend.routes import user_routes
 
 app = FastAPI()
 
-# 🔥 CORS MUST BE BEFORE ROUTES
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
